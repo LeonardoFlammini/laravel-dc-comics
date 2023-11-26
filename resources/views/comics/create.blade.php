@@ -4,6 +4,8 @@
     | Crea Prodotto
 @endsection
 
+@include('partials.header')
+
 @section('main_content')
     <h1>Inserisci nuovo prodotto</h1>
     <form action="{{route('comics.store')}}" method="POST" class="mt-5">
@@ -54,7 +56,7 @@
                 <button type="submit" class="btn btn-primary" style='width: 100%'>Crea</button>
             </div>
             <div class="col-2">
-            <button type="Annulla" class="btn btn-danger " style='width: 100%'>Reset</button>
+            <button type="reset" class="btn btn-danger " style='width: 100%'>Reset</button>
             </div>
         </div>
     </form>
