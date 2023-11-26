@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('title',100);
             $table->text('description');
-            $table->string('thumb');
+            $table->text('thumb');
             $table->string('price',8);
-            $table->string('series', 20);
+            $table->string('series');
             $table->date('sale_date');
             $table->string('type',20);
             $table->timestamps();
