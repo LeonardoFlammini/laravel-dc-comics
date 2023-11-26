@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guest;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Comic;
 
 class ComicController extends Controller
 {
@@ -14,7 +15,8 @@ class ComicController extends Controller
      */
     public function index()
     {
-        return view('comics.index');
+        $comics = Comic::orderby('id')->paginate(10);
+        return view('comics.index', compact('comics'));
     }
 
     /**

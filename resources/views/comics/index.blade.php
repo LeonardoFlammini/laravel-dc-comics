@@ -4,6 +4,8 @@
 | Products
 @endsection
 
+@include('partials.header')
+
 @section('main_content')
     <h1>Prodotti</h1>
     <table class="table">
@@ -16,12 +18,15 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($comics as $comic)
             <tr>
-                <td>A</td>
-                <td>B</td>
-                <td>C</td>
-                <td>D</td>
+                <td>{{$comic->id}}</td>
+                <td>{{$comic->title}}</td>
+                <td>{{$comic->price}}</td>
+                <td><a href="#" class="btn btn-success">Details <i class="fa-regular fa-eye" style='margin-left:5px'></i></a></td>
             </tr>
+            @endforeach
+
         </tbody>
     </table>
 @endsection
