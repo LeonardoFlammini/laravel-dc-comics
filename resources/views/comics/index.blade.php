@@ -23,10 +23,13 @@
                 <td>{{$comic->id}}</td>
                 <td>{{$comic->title}}</td>
                 <td>{{$comic->price}}</td>
-                <td><a href="#" class="btn btn-success">Details <i class="fa-regular fa-eye" style='margin-left:5px'></i></a></td>
+                <td><a href="{{route('comics.show', $comic)}}" class="btn btn-success">Details <i class="fa-regular fa-eye" style='margin-left:5px'></i></a></td>
             </tr>
             @endforeach
 
         </tbody>
     </table>
+
+    {{ $comics->links() }}
+
 @endsection
