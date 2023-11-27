@@ -16,6 +16,7 @@
 <h3 class="mt-3">Description</h3>
 <p class="description">{{$comic->description}}</p>
 <h3>Price: {{$comic->price}}</h3>
+<a href="{{route('comics.edit', $comic)}}" class="btn btn-warning">Edit <i class="fa-solid fa-pencil" style='margin-left:5px'></i></a>
 
 
 

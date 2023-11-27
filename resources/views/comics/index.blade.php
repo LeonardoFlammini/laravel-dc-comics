@@ -23,7 +23,10 @@
                 <td>{{$comic->id}}</td>
                 <td>{{$comic->title}}</td>
                 <td>{{$comic->price}}</td>
-                <td><a href="{{route('comics.show', $comic)}}" class="btn btn-success">Details <i class="fa-regular fa-eye" style='margin-left:5px'></i></a></td>
+                <td>
+                    <a href="{{route('comics.show', $comic)}}" class="btn btn-success">Details <i class="fa-regular fa-eye" style='margin-left:5px'></i></a>
+                    <a href="{{route('comics.edit', $comic)}}" class="btn btn-warning">Edit <i class="fa-solid fa-pencil" style='margin-left:5px'></i></a>
+                </td>
             </tr>
             @endforeach
 
